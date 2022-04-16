@@ -1,0 +1,73 @@
+html {
+  font-size: 16px;
+  box-sizing: border-box;
+}
+body {
+  min-height: 500vh;
+}
+/* Nav Menu */
+
+.navbar .nav-item {
+  display: flex;
+  align-items: center;
+}
+.navbar .navbar-toggler {
+  border-color: rgba(81, 209, 246, 1);
+  color: rgba(81, 209, 246, 1);
+}
+.navbar .nav-item .nav-link {
+  color: rgba(81, 209, 246, 0.75);
+  padding: 6px;
+}
+.navbar-collapse.show {
+  padding-bottom: 1rem;
+}
+.navbar .nav-item .nav-link:hover,
+.navbar .nav-item .nav-link:focus {
+  border-bottom: thin solid rgba(81, 209, 246, 1);
+  color: rgba(81, 209, 246, 1);
+}
+.navbar a[href='#'] {
+  width: 100px;
+}
+
+/* Hero Image */
+.hero-image {
+  background-image: url('./img/Ingenieria_carrousell_desk-_1920x1080.jpg');
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: cover;
+  background-attachment: fixed;
+  height: calc(100vh - 100px);
+  width: 100%;
+}
+.hero-image h1 {
+  font-size: 4rem;
+  color: white;
+  text-align: center;
+}
+.hero-image img {
+  width: 250px;
+  height: 250px;
+  background-color: black;
+  border-radius: 50%;
+}
+
+/* Main */
+main section {
+  height: 100vh;
+  padding: 100px 10vw 0;
+}
+main section h2 {
+  color: white;
+  font-size: 4rem;
+  text-align: center;
+}
+
+main section:nth-child(2n) {
+  background-color: rgb(0, 102, 255);
+}
+
+main section:nth-child(2n + 1) {
+  background-color: rgb(57, 149, 154);
+}
