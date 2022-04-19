@@ -1,15 +1,27 @@
 html {
   font-size: 16px;
-  box-sizing: border-box;
+  overflow-x: hidden;
 }
-body {
-  min-height: 500vh;
-}
-/* Nav Menu */
 
+/* *,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+} */
+
+/* Nav Menu */
+.navbar {
+  z-index: 999;
+}
 .navbar .nav-item {
   display: flex;
   align-items: center;
+}
+.navbar-brand img {
+  width: 100px;
+  border-radius: 50%;
+  padding: 1rem;
 }
 .navbar .navbar-toggler {
   border-color: rgba(81, 209, 246, 1);
@@ -33,24 +45,14 @@ body {
 
 /* Hero Image */
 .hero-image {
-  background-image: url('./img/Ingenieria_carrousell_desk-_1920x1080.jpg');
-  background-repeat: no-repeat;
-  background-position: top left;
-  background-size: cover;
-  background-attachment: fixed;
   height: calc(100vh - 100px);
   width: 100%;
 }
-.hero-image h1 {
-  font-size: 4rem;
-  color: white;
-  text-align: center;
-}
-.hero-image img {
-  width: 250px;
-  height: 250px;
-  background-color: black;
-  border-radius: 50%;
+.hero-image video {
+  object-fit: cover;
+  object-position: center center;
+  width: 100%;
+  height: 100%;
 }
 
 /* Main */
