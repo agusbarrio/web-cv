@@ -1,13 +1,21 @@
-const navbar = () => {
+const navbar = (button, links, homeLink, menu) => {
+  const $button = document.querySelector(button),
+    $menu = document.querySelector(menu);
+
   document.addEventListener('click', (e) => {
+    if (e.target.matches(button) || e.target.matches(`${button} *`)) {
+      $button.classList.toggle('is-active');
+    }
     if (
-      e.target.matches('.nav-link') ||
-      e.target.matches('.navbar-brand') ||
-      e.target.matches('.navbar-brand *')
+      e.target.matches(links) ||
+      e.target.matches(`${links} *`) ||
+      e.target.matches(homeLink) ||
+      e.target.matches(`${homeLink} *`)
     ) {
-      document.querySelector('.navbar-collapse').classList.remove('show');
-      document.querySelector('.navbar-toggler').classList.add('collapsed');
-      document.querySelector('.navbar-toggler').ariaExpanded = false;
+      $menu.classList.remove('show');
+      $button.classList.add('collapsed');
+      $button.classList.remove('is-active');
+      $button.ariaExpanded = false;
     }
   });
 };

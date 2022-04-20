@@ -2,6 +2,9 @@ html {
   font-size: 16px;
 }
 
+header {
+  z-index: 999;
+}
 /* Nav Menu */
 
 .navbar .nav-item {
@@ -13,17 +16,37 @@ html {
   border-radius: 50%;
   padding: 1rem;
 }
+
 .navbar .navbar-toggler {
   border-color: rgba(81, 209, 246, 1);
+  box-shadow: none;
   color: rgba(81, 209, 246, 1);
+  border-radius: 50%;
+  width: 68px;
+  height: 68px;
 }
-.navbar .nav-item .nav-link {
+
+.hamburger-inner,
+.hamburger-inner::after,
+.hamburger-inner::before {
+  background-color: rgba(81, 209, 246, 0.75);
+}
+
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner:after,
+.hamburger.is-active .hamburger-inner:before {
+  background-color: rgba(81, 209, 246, 1);
+}
+.navbar .navbar-nav {
+}
+.navbar .navbar-nav .nav-link {
+  font-size: 1.25rem;
+  font-weight: bold;
   color: rgba(81, 209, 246, 0.75);
-  padding: 6px;
+  padding: 6px 12px;
+  min-width: max-content;
 }
-.navbar-collapse.show {
-  padding-bottom: 1rem;
-}
+
 .navbar .nav-item .nav-link:hover,
 .navbar .nav-item .nav-link:focus {
   border-bottom: thin solid rgba(81, 209, 246, 1);
