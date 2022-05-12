@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   videoMedia(
     '.hero-image',
     '(max-width: 500px)',
-    'assets/img/movil-video.mp4',
+    'assets/img/movil-video-1.mp4',
     'assets/img/video.mp4'
   );
 });
