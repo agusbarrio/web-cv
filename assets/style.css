@@ -49,15 +49,17 @@ header {
   font-size: 1.25rem;
   font-weight: bold;
   color: rgba(81, 209, 246, 0.75);
+  /* border: thin solid transparent; */
+  border-radius: 1.75em/1.5em;
   padding: 6px 12px;
   min-width: max-content;
 }
 
-.navbar .nav-item .nav-link:hover,
-.navbar .nav-item .nav-link:focus {
-  border-bottom: thin solid rgba(81, 209, 246, 1);
-  color: rgba(81, 209, 246, 1);
+.navbar .nav-item .nav-link:hover {
+  background-color: rgba(81, 209, 246, 0.75);
+  color: #212525;
 }
+
 .navbar a[href='#'] {
   width: 100px;
 }
